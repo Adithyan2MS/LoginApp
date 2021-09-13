@@ -20,7 +20,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class MainActivity extends AppCompatActivity {
     private Retrofit retrofit;
     private RetrofitInterface retrofitInterface;
-    private String BASE_URL="http://10.0.2.2:3001";
+    private String BASE_URL="http://192.168.43.172:3001";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
