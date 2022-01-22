@@ -67,8 +67,9 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<LoginResult> call, Response<LoginResult> response) {
                         if(response.code()==200){
+                            LoginResult result = response.body();
                             AlertDialog.Builder builder1=new AlertDialog.Builder(MainActivity.this);
-                            LoginResult result = null;
+
                             builder1.setTitle(result.getName());
                             builder1.setMessage(result.getEmail());
 

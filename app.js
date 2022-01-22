@@ -20,12 +20,14 @@ mongoClient.connect(url,(err,db)=>{
                 password:req.body.password
             }
 
+            
             const query={email:newUser.email}
 
             collection.findOne(query,(err,result)=>{
                 if(result==null){
                     collection.insertOne(newUser,(err,result)=>{
                         res.status(200).send()
+                        console.log('data added');
                     })
                 }else{
                     res.status(400).send()
